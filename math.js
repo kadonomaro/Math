@@ -12,6 +12,7 @@ let mathMini = {
         }
         return divisor;
     },
+
     factorial: function (num) {
         let counter = 1;
         let result = 1;
@@ -22,6 +23,7 @@ let mathMini = {
         }
         return result;
     },
+
     pow: function (x, y) {
         let result = 1;
         if (y === 0) {
@@ -35,15 +37,33 @@ let mathMini = {
         }
         return result;
     },
+
     sqrt: function (num) {
-        console.log(num);
+        if (num < 0) {
+            return NaN;
+        }
+        if (num === 1) {
+            return 1;
+        }
+        for (let i = 0; i < num; i = i + 0.1) {
+            let result = Math.pow(num, i);
+            // console.log(result);
+            // let result = this.pow(num, i);
+            if (Math.round(result * result) === num) {
+                return result;
+            }
+        }
     },
-    degreeToRadians: function (degree) {
-        let radians = degree * Math.PI / 180;
-        return radians;
+
+    degToRad: function (degree) {
+        let radian = degree * (Math.PI / 180);
+        return radian;
+    },
+
+    radToDeg: function (radian) {
+        let degree = radian * (180 / Math.PI);
+        return degree;
     }
 };
 
 export {mathMini};
-
-
