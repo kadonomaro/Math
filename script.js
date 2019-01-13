@@ -5,8 +5,24 @@ import { mathMini } from "./math.js";
 // console.log("Exponent: ", mathMini.pow(5, 5));
 // console.log("Radian: ", mathMini.degToRad(45));
 // console.log("Degree", mathMini.radToDeg(0.78539));
-console.log("Square root", mathMini.sqrt(6));
-console.log("Original Math sqrt",Math.sqrt(6));
+console.log("Square root", mathMini.sqrt(12));
+console.log("Original Math sqrt", Math.sqrt(12));
+
+let alertCount = 0;
+for (let i = 0; i < 1000; i++) {
+    let mine = mathMini.sqrt(i).toFixed(13);
+    let origin = Math.sqrt(i).toFixed(13); 
+    
+    console.log(i + " Square root: ", mine);
+    console.log(i + " Original Math sqrt: ", origin);
+    if (mine !== origin) {
+        console.error("ALERT");
+        alertCount++;
+    }
+    console.log("--------------------------");
+    
+}
+console.log("Alert count: ", alertCount);
 
 
 var powInput = document.createElement("input");
