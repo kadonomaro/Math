@@ -24,16 +24,17 @@ let mathMini = {
         return result;
     },
 
-    pow: function (x, y) {
+    pow: function (number, exponent) {
         let result = 1;
-        if (y === 0) {
+        if (exponent === 0) {
             return 1;
         }
-        if (y === 1) {
-            return x;
+        if (exponent === 1) {
+            return number;
         }
-        for (let i = 0; i < y; i++) {
-            result *= x;          
+        for (let i = 0; i < exponent; i = i + 1) {
+            // result *= number;
+            result = result * number;
         }
         return result;
     },
@@ -70,4 +71,6 @@ let mathMini = {
     }
 };
 
-export {mathMini};
+export { mathMini };
+
+console.log(mathMini.pow(5, 5));
