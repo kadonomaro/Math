@@ -14,3 +14,5 @@ drawGUI();
 
 // testMathSqrt(50, 12);
 // testMathPow(10, 2);
+let arr = [5,5,6,7,8,9,10,12,5,17,22,13,5,14,18,5,6,7,8,9,10,12,14,5,2,14,3,5,"bob"];
+console.log(mathMini.linearSearch(arr, 5)); 

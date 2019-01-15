@@ -68,9 +68,26 @@ let mathMini = {
     radToDeg: function (radian) {
         let degree = radian * (180 / Math.PI);
         return degree;
+    },
+
+    circleArea: function (radius) {
+        let S = Math.PI * (radius * radius);
+        return S;
+    },
+
+    linearSearch: function (array, key) {
+        let arrayIndex = [];
+        for (let i = 0; i < array.length; i++){
+            if (array[i] === key) {
+                arrayIndex.push(i);
+            }
+        }
+        return arrayIndex;
     }
 };
 
 export { mathMini };
 
 console.log(mathMini.pow(5, 5));
+console.log(mathMini.circleArea(50));
+
