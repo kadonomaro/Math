@@ -83,11 +83,23 @@ let mathMini = {
             }
         }
         return arrayIndex;
+    },
+
+    bubbleSort: function (arrayToSort) {
+        for (let i = 0; i < arrayToSort.length; i++){
+            for (var j = 0; j < arrayToSort.length - i; j++){
+                if (arrayToSort[j] > arrayToSort[j + 1]) {
+                    let temp = arrayToSort[j];
+                    arrayToSort[j] = arrayToSort[j + 1];
+                    arrayToSort[j + 1] = temp;
+                    
+                }
+            }
+        }
+        return arrayToSort;
+        
     }
 };
 
+
 export { mathMini };
-
-console.log(mathMini.pow(5, 5));
-console.log(mathMini.circleArea(50));
-
