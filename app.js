@@ -15,7 +15,6 @@ function spinWords() {
 function isIsogram(str) {
     let counter = 0;
     let strArr = str.toLowerCase().split('');
-    debugger;
     for (let i = 0; i < strArr.length; i++) {
         let char = strArr[i];
         for (let j = 0; j < i; j++) {
@@ -25,14 +24,20 @@ function isIsogram(str) {
                 counter++;
             }
         }
-        
     }
     if (counter > 0) {
         return false;
     } else {
         return true;
     }
-
 }
 
 console.log(isIsogram('aHas'));
+
+//рандомизация чисел в указанном диапазоне
+function randomRange(min, max) {
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  
+}
+
