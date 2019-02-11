@@ -12,11 +12,27 @@ function spinWords() {
 }
 
 
-
-
-function isIsogram(str){
-    let strArr = str.split('');
+function isIsogram(str) {
+    let counter = 0;
+    let strArr = str.toLowerCase().split('');
+    debugger;
     for (let i = 0; i < strArr.length; i++) {
-    
+        let char = strArr[i];
+        for (let j = 0; j < i; j++) {
+            
+            let next = strArr[j];
+            if (char === next) {
+                counter++;
+            }
+        }
+        
     }
-  }
+    if (counter > 0) {
+        return false;
+    } else {
+        return true;
+    }
+
+}
+
+console.log(isIsogram('aHas'));
