@@ -92,12 +92,20 @@ let mathMini = {
                     let temp = arrayToSort[j];
                     arrayToSort[j] = arrayToSort[j + 1];
                     arrayToSort[j + 1] = temp;
-                    
                 }
             }
         }
         return arrayToSort;
-        
+    },
+
+    fib: function (n) {
+        let prev = 0, next = 1;
+        for (let i = 0; i < n; i++) {
+            let temp = next;
+            next = prev + next;
+            prev = temp;
+        }
+        return prev;
     }
 };
 
