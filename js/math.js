@@ -99,14 +99,14 @@ let mathMini = {
 
     fib: function (n) {
         let prev = 0, next = 1;
-        let summ = [0];
+        let sum = [0];
         for (let i = 0; i < n; i++) {
             let temp = next;
             next = prev + next;
             prev = temp;
-            summ.push(prev);
+            sum.push(prev);
         }
-        return summ;
+        return sum;
     }
 };
 
