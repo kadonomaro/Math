@@ -111,4 +111,4 @@ let mathMini = {
 };
 
 
-export { mathMini };
+module.exports = mathMini;

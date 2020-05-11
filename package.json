@@ -4,11 +4,14 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "npm jest"
+    "test": "jest"
   },
   "author": "Kadonomaro <denis.afer@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.0.1"
+  },
+  "transform": {
+    "\\.js$": "/node_modules/babel-jest"
   }
 }
