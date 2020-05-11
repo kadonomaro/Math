@@ -33,8 +33,7 @@ let mathMini = {
             return number;
         }
         for (let i = 0; i < exponent; i = i + 1) {
-            // result *= number;
-            result = result * number;
+            result *= number;
         }
         return result;
     },
