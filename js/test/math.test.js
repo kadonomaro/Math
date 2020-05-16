@@ -49,3 +49,20 @@ describe('mathMini sqrt function: ', () => {
         expect(mathMini.sqrt(115)).toBe(10.723805294763608);
     });
 });
+
+
+describe('mathMini bubbleSort function: ', () => {
+    const arr = [5, 3, 2, 7, 9, 12, 15];
+    test('should return sorted array', () => {
+        expect(mathMini.bubbleSort(arr)).toEqual([2, 3, 5, 7, 9, 12, 15]);
+    });
+});
+
+
+describe('mathMini fib function: ', () => {
+    test('should return fibonacci numbers sequences', () => {
+        expect(mathMini.fib(5)).toEqual([0, 1, 1, 2, 3, 5]);
+        expect(mathMini.fib(10)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+        expect(mathMini.fib(20)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]);
+    });
+});

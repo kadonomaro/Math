@@ -1,8 +1,4 @@
-import { mathMini } from "./math.js";
-
-
-
-
+const mathMini = require('./math');
 
 
 
